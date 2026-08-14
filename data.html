@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Data — Bend Night Sky Alliance</title>
+<meta name="description" content="An interactive map of Bend's streetlight survey, flagged lights, and lighting corridor phases.">
+<link rel="stylesheet" href="assets/style.css">
+<link rel="stylesheet" href="assets/vendor/leaflet/leaflet.css"/>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="/">
+      <img src="assets/logo.jpg" alt="Bend Night Sky Alliance">
+      <span class="brand-name">Bend Night Sky<br>Alliance</span>
+    </a>
+    <nav class="nav-links">
+      <a href="/">Home</a>
+      <a href="mission.html">Mission</a>
+      <a href="projects.html">Projects</a>
+      <a href="get-involved.html">Get Involved</a>
+      <a href="data.html" class="current">Data</a>
+      <a href="resources.html">Resources</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <button class="nav-toggle" aria-label="Toggle menu">☰</button>
+  </div>
+</header>
+
+<section class="page-hero">
+  <div class="wrap">
+    <div class="eyebrow">Field data</div>
+    <h1 style="max-width:18ch;">What we know.</h1>
+    <p class="lede">Every streetlight we've catalogued and the lights actively flagged for replacement. Light pollution over time. Financial impacts of dark sky initiatives. We have it all.</p>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div id="bnsa-map"></div>
+    <div class="map-legend">
+      <span><i style="background:#E0B85C;"></i>Flagged — submitted for review</span>
+      <span><i style="background:#7E9DBD;"></i>Flagged — fixed</span>
+      <span><i style="background:#565A64;"></i>Full streetlight inventory</span>
+      <span><i style="background:#C79A3C; border-radius:2px;"></i>Phase 1 corridor (complete)</span>
+      <span><i style="background:#7E9DBD; border-radius:2px;"></i>Phase 2 corridor (in progress)</span>
+    </div>
+    <p style="margin-top:24px; max-width:64ch;">Spotted a light that should be on this map, or one that's already been fixed? <a href="contact.html" style="color:var(--gold);">Let us know</a> and we'll get it added on our next update pass.</p>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div>
+      <div class="foot-brand">Bend Night Sky Alliance</div>
+      <div class="foot-meta">Bend, Oregon · Est. 2024</div>
+    </div>
+    <nav class="foot-links">
+      <a href="mission.html">Mission</a>
+      <a href="projects.html">Projects</a>
+      <a href="get-involved.html">Get Involved</a>
+      <a href="data.html">Data</a>
+      <a href="resources.html">Resources</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </div>
+</footer>
+
+<script src="assets/vendor/leaflet/leaflet.js"></script>
+<script src="assets/site.js"></script>
+<script src="assets/map.js"></script>
+</body>
+</html>
