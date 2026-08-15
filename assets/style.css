@@ -30,6 +30,11 @@
   --serif: 'Fraunces', Georgia, serif;
   --sans:  'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
   --mono:  'IBM Plex Mono', ui-monospace, monospace;
+
+  --glow-opacity: 0.22;
+  --dark-opacity: 0;
+
+  --mw-opacity: 0;
 }
 
 *, *::before, *::after{ box-sizing: border-box; }
@@ -142,12 +147,10 @@ p{ margin: 0 0 1em; }
 .hero::before{
   content:"";
   position:absolute; inset:0;
-  background:
-    radial-gradient(ellipse 60% 50% at 50% 0%, rgba(199,154,60,0.10), transparent 60%),
-    linear-gradient(180deg, #0A0D12 0%, #0A0D12 70%, #0D1117 100%);
+  background: linear-gradient(180deg, #0A0D12 0%, #0A0D12 70%, #0D1117 100%);
   z-index:0;
 }
-#starfield{ position:absolute; inset:0; z-index:0; }
+#starfield{ position:absolute; inset:0; width:100%; height:100%; z-index:0; }
 .hero .wrap{ position: relative; z-index: 1; }
 
 .hero-ridge{
@@ -179,12 +182,60 @@ p{ margin: 0 0 1em; }
   background: linear-gradient(180deg, rgba(23,28,40,0.7), rgba(18,22,31,0.7));
   padding: 22px 26px;
   max-width: 560px;
+  position: relative; z-index: 2;
 }
 .bortle-row{ display:flex; align-items:center; gap: 3px; margin-top:12px; }
-.bortle-seg{ flex:1; height:6px; border-radius:1px; background: var(--bg-raise-2); position:relative; }
+.bortle-seg{
+  flex:1; height:6px; border-radius:1px; background: var(--bg-raise-2); position:relative;
+  cursor: pointer; transition: background-color 0.25s ease, transform 0.15s ease;
+}
+.bortle-seg:hover{ transform: scaleY(1.6); }
 .bortle-seg.active{ background: var(--gold-dim); }
 .bortle-seg.bend{ background: var(--gold); }
+.bortle-seg.selected{ box-shadow: 0 0 0 2px var(--gold-bright); z-index: 1; }
+
+/* Fixed marker for Bend's actual reading — stays put regardless of what's selected */
+.bortle-seg.bend::after{
+  content:''; position:absolute; top:-7px; left:50%; transform:translateX(-50%);
+  width:0; height:0; border-left:4px solid transparent; border-right:4px solid transparent;
+  border-top:5px solid var(--blue);
+}
+
 .bortle-labels{ display:flex; justify-content:space-between; font-family: var(--mono); font-size:0.66rem; color: var(--cream-mute); margin-top:8px; letter-spacing:0.04em; }
+.bortle-caption{
+  margin: 14px 0 0; font-size: 0.82rem; color: var(--cream-dim);
+  min-height: 1.4em; transition: opacity 0.2s ease;
+}
+
+/* Sky-brightness preview overlays — both default to invisible (0 opacity),
+   so the page renders identically to before until someone clicks a bar */
+.sky-glow-warm{
+  position:absolute; inset:0; z-index:0; pointer-events:none;
+  background:
+    radial-gradient(ellipse 85% 60% at 50% 100%, rgba(224,184,92,0.95), rgba(190,150,80,0.5) 40%, transparent 72%),
+    linear-gradient(0deg, rgba(190,150,80,0.6) 0%, transparent 45%);
+  opacity: var(--glow-opacity);
+  transition: opacity 0.6s ease;
+}
+.sky-glow-dark{
+  position:absolute; inset:0; z-index:0; pointer-events:none;
+  background: radial-gradient(ellipse 80% 70% at 50% 25%, rgba(0,0,0,0.9), transparent 75%);
+  opacity: var(--dark-opacity);
+  transition: opacity 0.6s ease;
+}
+
+/* https://images-assets.nasa.gov/image/art002e012588/art002e012588~large.jpg */
+.milky-way-photo{
+  position:absolute; inset:0;
+  z-index:0; pointer-events:none;
+  background-image: url('milky-way.jpg');
+  background-size: cover;
+  background-position: 45% 40%;
+  mix-blend-mode: screen;
+  filter: brightness(0.85) saturate(0.8);
+  opacity: var(--mw-opacity);
+  transition: opacity 0.6s ease;
+}
 
 /* ---------- sections ---------- */
 section{ padding: 84px 0; }

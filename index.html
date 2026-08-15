@@ -40,31 +40,36 @@
       <a class="btn ghost" href="mission.html">Read our mission</a>
     </div>
 
-    <div class="bortle">
-      <div class="eyebrow" style="margin-bottom:0;">Sky quality, then &amp; now</div>
-      <div class="bortle-row">
-        <div class="bortle-seg active"></div>
-        <div class="bortle-seg active"></div>
-        <div class="bortle-seg active"></div>
-        <div class="bortle-seg bend"></div>
-        <div class="bortle-seg"></div>
-        <div class="bortle-seg"></div>
-        <div class="bortle-seg"></div>
-        <div class="bortle-seg"></div>
-        <div class="bortle-seg"></div>
-      </div>
-      <div class="bortle-labels">
-        <span>1 — Pristine</span>
-        <span>5 — Bend today</span>
-        <span>9 — Inner city</span>
-      </div>
-    </div>
+<div class="bortle">
+  <div class="eyebrow" style="margin-bottom:0;">Sky quality</div>
+  <div class="bortle-row">
+    <div class="bortle-seg active" data-bortle="1" role="button" tabindex="0" aria-label="Preview Bortle Class 1"></div>
+    <div class="bortle-seg active" data-bortle="2" role="button" tabindex="0" aria-label="Preview Bortle Class 2"></div>
+    <div class="bortle-seg active" data-bortle="3" role="button" tabindex="0" aria-label="Preview Bortle Class 3"></div>
+    <div class="bortle-seg active" data-bortle="4" role="button" tabindex="0" aria-label="Preview Bortle Class 4"></div>
+    <div class="bortle-seg bend active selected" data-bortle="5" role="button" tabindex="0" aria-label="Preview Bortle Class 5 — Bend today"></div>
+    <div class="bortle-seg" data-bortle="6" role="button" tabindex="0" aria-label="Preview Bortle Class 6"></div>
+    <div class="bortle-seg" data-bortle="7" role="button" tabindex="0" aria-label="Preview Bortle Class 7"></div>
+    <div class="bortle-seg" data-bortle="8" role="button" tabindex="0" aria-label="Preview Bortle Class 8"></div>
+    <div class="bortle-seg" data-bortle="9" role="button" tabindex="0" aria-label="Preview Bortle Class 9"></div>
   </div>
-  <div class="hero-ridge">
-    <svg viewBox="0 0 1200 120" preserveAspectRatio="none">
-      <path d="M0,120 L0,70 L120,50 L220,80 L340,30 L420,60 L540,20 L640,55 L760,15 L880,50 L980,40 L1080,65 L1200,45 L1200,120 Z" fill="#0A0D12"/>
-    </svg>
+  <div class="bortle-labels">
+    <span>1 — Pristine</span>
+    <span>Bend today</span>
+    <span>9 — Inner city</span>
   </div>
+  <p class="bortle-caption" id="bortleCaption"></p>
+</div>
+</div>
+
+<div class="milky-way-photo" aria-hidden="true"></div>
+<div class="sky-glow-warm" aria-hidden="true"></div>
+<div class="sky-glow-dark" aria-hidden="true"></div>
+<div class="hero-ridge">
+  <svg viewBox="0 0 1200 120" preserveAspectRatio="none">
+    <path d="M0,120 L0,70 L120,50 L220,80 L340,30 L420,60 L540,20 L640,55 L760,15 L880,50 L980,40 L1080,65 L1200,45 L1200,120 Z" fill="#0A0D12"/>
+  </svg>
+</div>
 </section>
 
 <section>
@@ -152,5 +157,6 @@
 </footer>
 
 <script src="assets/site.js"></script>
+<script src="assets/bortle.js"></script>
 </body>
 </html>
