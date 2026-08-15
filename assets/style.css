@@ -22,6 +22,8 @@
   --blue:      #7E9DBD;
   --blue-dim:  #4E6E8E;
 
+  --white:     #FFFFFF;
+
   --radius: 3px;
   --max: 1120px;
 
@@ -325,10 +327,12 @@ footer .foot-meta{ font-family: var(--mono); font-size:0.68rem; color: var(--cre
   display:flex; flex-direction:column; align-items:center; text-align:center; gap:18px;
 }
 .partner-logo{
-  width:100%; height:96px; display:flex; align-items:center; justify-content:center;
-  background: var(--cream); border-radius: var(--radius); padding: 14px;
+  width:100%; height:200x; display:flex; align-items:center; justify-content:center;
+  background: var(--white); border-radius: var(--radius); padding: 14px;
 }
-.partner-logo img{ max-width:100%; max-height:100%; object-fit:contain; }
+/*.partner-logo img{
+  max-width: 200px; max-height: 200px; width:auto; height:auto; object-fit:contain;
+}*/
 .partner-logo.placeholder{
   border:1px dashed var(--line); border-radius: var(--radius);
   color: var(--cream-mute); font-family: var(--mono); font-size:0.68rem;
