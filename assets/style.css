@@ -94,10 +94,10 @@ p{ margin: 0 0 1em; }
 }
 .site-header .wrap{
   display:flex; align-items:center; justify-content:space-between;
-  height: 76px;
+  height: 90px;
 }
 .brand{ display:flex; align-items:center; gap:12px; }
-.brand img{ height: 40px; width:auto; }
+.brand img{ height: 80px; width:auto; }
 .brand-name{
   font-family: var(--serif); color: var(--cream);
   font-size: 1rem; letter-spacing: 0.02em;
@@ -110,7 +110,7 @@ p{ margin: 0 0 1em; }
 
 .nav-links{ display:flex; gap: 2px; align-items:center; }
 .nav-links a{
-  font-size: 0.86rem; padding: 10px 16px; border-radius: var(--radius);
+  font-size: 1rem; padding: 10px 16px; border-radius: var(--radius);
   color: var(--cream-dim); transition: color .15s ease, background .15s ease;
 }
 .nav-links a:hover{ color: var(--cream); background: var(--bg-raise); }
@@ -120,7 +120,7 @@ p{ margin: 0 0 1em; }
 
 @media (max-width: 860px){
   .nav-links{
-    position:absolute; top:76px; left:0; right:0;
+    position:absolute; top:90px; left:0; right:0;
     flex-direction:column; align-items:stretch;
     background: var(--bg-raise);
     border-bottom:1px solid var(--line);
