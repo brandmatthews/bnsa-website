@@ -2,7 +2,7 @@
    Bend Night Sky Alliance — shared stylesheet
    ========================================================================== */
 
-@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;700&display=swap');
 
 :root{
   --bg:        #0A0D12;
@@ -48,7 +48,7 @@ html{ scroll-behavior: smooth; }
 body{
   margin:0;
   background: var(--bg);
-  color: var(--cream-dim);
+  color: var(--cream);
   font-family: var(--sans);
   font-size: 16px;
   line-height: 1.6;
@@ -75,10 +75,11 @@ p{ margin: 0 0 1em; }
 
 .eyebrow{
   font-family: var(--mono);
-  font-size: 0.72rem;
+  font-size: 0.85rem;
+  font-weight: 700;
   letter-spacing: 0.14em;
   text-transform: uppercase;
-  color: var(--gold);
+  color: var(--gold-bright);
   display: flex;
   align-items: center;
   gap: 10px;
@@ -163,7 +164,7 @@ p{ margin: 0 0 1em; }
 .page-hero .hero-ridge{ z-index:0; }
 
 .hero h1{ max-width: 15ch; }
-.hero .lede{ max-width: 52ch; font-size: 1.08rem; color: var(--cream-dim); }
+.hero .lede{ max-width: 52ch; font-size: 1.08rem; color: var(--cream); }
 
 .btn-row{ display:flex; gap:14px; flex-wrap:wrap; margin-top: 32px; }
 .btn{
@@ -174,7 +175,7 @@ p{ margin: 0 0 1em; }
 }
 .btn.primary{ background: var(--gold); border-color: var(--gold); color: #0A0D12; font-weight: 600; }
 .btn.primary:hover{ background: var(--gold-bright); border-color: var(--gold-bright); }
-.btn.ghost{ color: var(--cream-dim); }
+.btn.ghost{ color: var(--cream); }
 .btn.ghost:hover{ border-color: var(--cream-mute); color: var(--cream); }
 
 /* ---------- bortle widget (signature element) ---------- */
@@ -182,16 +183,17 @@ p{ margin: 0 0 1em; }
   margin-top: 56px;
   border: 1px solid var(--line); border-radius: var(--radius);
   background: linear-gradient(180deg, rgba(23,28,40,0.7), rgba(18,22,31,0.7));
-  padding: 22px 26px;
-  max-width: 560px;
+  padding: 30px 34px;
+  max-width: 660px;
   position: relative; z-index: 2;
 }
-.bortle-row{ display:flex; align-items:center; gap: 3px; margin-top:12px; }
+.bortle-row{ display:flex; align-items:center; gap: 4px; margin-top:16px; }
 .bortle-seg{
-  flex:1; height:6px; border-radius:1px; background: var(--bg-raise-2); position:relative;
-  cursor: pointer; transition: background-color 0.25s ease, transform 0.15s ease;
+  flex:1; height:11px; border-radius:2px; background: var(--bg-raise-2); position:relative;
+  border: 1px solid var(--line);
+  cursor: pointer; transition: background-color 0.25s ease, transform 0.15s ease, border-color 0.25s ease;
 }
-.bortle-seg:hover{ transform: scaleY(1.6); }
+.bortle-seg:hover{ transform: scaleY(1.4); }
 .bortle-seg.active{ background: var(--gold-dim); }
 .bortle-seg.bend{ background: var(--gold); }
 .bortle-seg.selected{ box-shadow: 0 0 0 2px var(--gold-bright); z-index: 1; }
@@ -203,9 +205,9 @@ p{ margin: 0 0 1em; }
   border-top:5px solid var(--blue);
 }
 
-.bortle-labels{ display:flex; justify-content:space-between; font-family: var(--mono); font-size:0.66rem; color: var(--cream-mute); margin-top:8px; letter-spacing:0.04em; }
+.bortle-labels{ display:flex; justify-content:space-between; font-family: var(--mono); font-size:0.66rem; color: var(--cream); margin-top:8px; letter-spacing:0.04em; }
 .bortle-caption{
-  margin: 14px 0 0; font-size: 0.82rem; color: var(--cream-dim);
+  margin: 14px 0 0; font-size: 0.95rem; color: var(--cream);
   min-height: 1.4em; transition: opacity 0.2s ease;
 }
 
@@ -257,8 +259,8 @@ section.raised{ background: var(--bg-raise); border-top:1px solid var(--line-sof
 .card p:last-child{ margin-bottom:0; }
 
 .stat{ border-top:1px solid var(--line); padding-top:16px; }
-.stat b{ display:block; font-family: var(--serif); font-size: 2.2rem; color: var(--gold-bright); font-weight:500; }
-.stat span{ font-family: var(--mono); font-size:0.72rem; color: var(--cream-mute); letter-spacing: 0.06em; text-transform:uppercase; }
+.stat b{ display:block; font-family: var(--sans); font-size: 2.2rem; color: var(--gold-bright); font-weight:600; }
+.stat span{ font-family: var(--sans); font-size:0.78rem; color: var(--cream); letter-spacing: 0.03em; text-transform:uppercase; }
 
 .quote{
   font-family: var(--serif); font-size: 1.5rem; color: var(--cream);
@@ -369,13 +371,13 @@ footer .foot-meta{ font-family: var(--mono); font-size:0.68rem; color: var(--cre
 }
 
 .map-legend{
-  display:flex; flex-wrap:wrap; gap:16px; margin-top:18px;
-  padding: 14px 18px; border: 1px solid var(--line); border-radius: var(--radius);
+  display:flex; flex-wrap:wrap; gap:18px; margin-top:18px;
+  padding: 16px 20px; border: 1px solid var(--line); border-radius: var(--radius);
   background: var(--bg-raise); width: fit-content;
-  font-family: var(--mono); font-size: 0.7rem; color: var(--cream-mute); letter-spacing:0.03em;
+  font-family: var(--mono); font-size: 0.82rem; color: var(--cream); letter-spacing:0.03em;
 }
-.map-legend span{ display:inline-flex; align-items:center; gap:8px; }
-.map-legend i{ width:10px; height:10px; border-radius:50%; display:inline-block; }
+.map-legend span{ display:inline-flex; align-items:center; gap:9px; }
+.map-legend i{ width:13px; height:13px; border-radius:50%; display:inline-block; }
 
 /* ---------- partners ---------- */
 .partner-grid{
