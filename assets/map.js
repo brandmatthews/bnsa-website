@@ -27,10 +27,11 @@ document.addEventListener('DOMContentLoaded', function () {
     maxZoom: 16
   }).addTo(map);
 
-  var goldColor = '#C79A3C';
-  var blueColor = '#7E9DBD';
-  var mutedColor = '#565A64';
-  var flagColor = '#E0B85C';
+  var redColor = '#c06767'; //Phase 1 corridor
+  var goldColor = '#ddb868'; //Phase 2 corridor
+  var mutedColor = '#858b99'; //Light inventory
+  var flagColor = '#7f39cf'; //Submitted
+  var fixedColor = '#db9437'; //Fixed
 
   // ---------- Roads ----------
   function roadStyle(color, dashed) {
@@ -43,7 +44,7 @@ document.addEventListener('DOMContentLoaded', function () {
     .then(function (r) { return r.json(); })
     .then(function (data) {
       L.geoJSON(data, {
-        style: roadStyle(goldColor, false),
+        style: roadStyle(redColor, false),
         onEachFeature: function (f, layer) {
           layer.bindPopup('<strong>Phase 1</strong><br>Status: ' + (f.properties.status || 'Unknown'));
         }
@@ -54,7 +55,7 @@ document.addEventListener('DOMContentLoaded', function () {
     .then(function (r) { return r.json(); })
     .then(function (data) {
       L.geoJSON(data, {
-        style: roadStyle(blueColor, true),
+        style: roadStyle(goldColor, true),
         onEachFeature: function (f, layer) {
           layer.bindPopup('<strong>Phase 2</strong><br>Status: ' + (f.properties.status || 'Unknown'));
         }
@@ -94,9 +95,9 @@ document.addEventListener('DOMContentLoaded', function () {
           var isFixed = p.status === 'Fixed';
           var marker = L.circleMarker(latlng, {
             radius: 7,
-            color: isFixed ? blueColor : flagColor,
+            color: isFixed ? fixedColor : flagColor,
             weight: 2,
-            fillColor: isFixed ? blueColor : flagColor,
+            fillColor: isFixed ? fixedColor : flagColor,
             fillOpacity: 0.9
           });
           marker.bindPopup(popupHTML(p));
