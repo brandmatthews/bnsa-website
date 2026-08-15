@@ -3,10 +3,9 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Data — Bend Night Sky Alliance</title>
-<meta name="description" content="An interactive map of Bend's streetlight survey, flagged lights, and lighting corridor phases.">
+<title>Partners — Bend Night Sky Alliance</title>
+<meta name="description" content="Organizations and businesses supporting Bend Night Sky Alliance.">
 <link rel="stylesheet" href="assets/style.css">
-<link rel="stylesheet" href="assets/vendor/leaflet/leaflet.css"/>
 </head>
 <body>
 
@@ -20,9 +19,9 @@
       <a href="/">Home</a>
       <a href="mission.html">Mission</a>
       <a href="projects.html">Projects</a>
+      <a href="data.html">Data</a>
       <a href="get-involved.html">Get Involved</a>
-      <a href="data.html" class="current">Data</a>
-      <a href="partners.html">Partners</a>
+      <a href="partners.html" class="current">Partners</a>
       <a href="resources.html">Resources</a>
       <a href="contact.html">Contact</a>
     </nav>
@@ -32,23 +31,37 @@
 
 <section class="page-hero">
   <div class="wrap">
-    <div class="eyebrow">Field data</div>
-    <h1 style="max-width:18ch;">What we know.</h1>
-    <p class="lede">Every streetlight we've catalogued and the lights actively flagged for replacement. Light pollution over time. Financial impacts of dark sky initiatives. We have it all.</p>
+    <div class="eyebrow">Who's with us</div>
+    <h1 style="max-width:18ch;">Partners + supporters.</h1>
+    <p class="lede">The organizations and local businesses helping BNSA protect Bend's night sky.</p>
   </div>
 </section>
 
 <section>
   <div class="wrap">
-    <div id="bnsa-map"></div>
-    <div class="map-legend">
-      <span><i style="background:#c06767; border-radius:2px;"></i>Phase 1 corridor (complete)</span>
-      <span><i style="background:#7f39cf;"></i>Flagged — submitted for review</span>
-      <span><i style="background:#db9437;"></i>Flagged — fixed</span>
-      <span><i style="background:#ddb868; border-radius:2px;"></i>Phase 2 corridor (in progress)</span>
-      <span><i style="background:#858b99;"></i>Full streetlight inventory</span>
+    <div class="partner-grid">
+
+      <div class="partner-card">
+        <img src="assets/partners/DarkSkyOregon.webp" alt="DarkSky Oregon">
+        <div class="partner-name">DarkSky Oregon</div>
+        <a class="btn-pill" href="https://darkskyoregon.org">Visit</a>
+      </div>
+
+      <div class="partner-card">
+        <img src="assets/partners/BAC.jpg" alt="Bend Astronomy Club">
+        <div class="partner-name">Bend Astronomy Club</div>
+        <a class="btn-pill" href="https://bendastronomy.net">Visit</a>
+      </div>
+
     </div>
-    <p style="margin-top:24px; max-width:64ch;">Spotted a light that should be on this map, or one that's already been fixed? <a href="contact.html" style="color:var(--gold);">Let us know</a> and we'll get it added on our next update pass.</p>
+  </div>
+</section>
+
+<section class="raised" style="text-align:center;">
+  <div class="wrap">
+    <h2 style="max-width:32ch; margin-left:auto; margin-right:auto;">Interested in partnering with BNSA?</h2>
+    <p style="max-width:48ch; margin:0 auto 28px;">We'd love to talk about how your organization could support dark skies in Bend.</p>
+    <a class="btn primary" href="contact.html">Get in touch</a>
   </div>
 </section>
 
@@ -70,8 +83,6 @@
   </div>
 </footer>
 
-<script src="assets/vendor/leaflet/leaflet.js"></script>
 <script src="assets/site.js"></script>
-<script src="assets/map.js"></script>
 </body>
 </html>
