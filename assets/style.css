@@ -160,6 +160,8 @@ p{ margin: 0 0 1em; }
 }
 .hero-ridge svg{ position:absolute; bottom:0; width:100%; height:100%; }
 
+.page-hero .hero-ridge{ z-index:0; }
+
 .hero h1{ max-width: 15ch; }
 .hero .lede{ max-width: 52ch; font-size: 1.08rem; color: var(--cream-dim); }
 
