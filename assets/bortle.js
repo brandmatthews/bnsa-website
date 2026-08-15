@@ -20,7 +20,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
   // Hand-tuned per level. glowFraction/darkFraction/mw drive the sky-color overlays;
   // starVis dims stars smoothly, starMaxFraction thins the actual star COUNT —
-  // both together give a gradual, realistic falloff rather than a late cliff.
+  // both together give a gradual falloff.
   var LEVELS = {
     1: { glow: 0,    dark: 0.42, starVis: 1.7,  starMaxFraction: 1,    mw: 0.40 },
     2: { glow: 0,    dark: 0.30, starVis: 1.5,  starMaxFraction: 1,    mw: 0.24 },

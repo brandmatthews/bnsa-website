@@ -305,6 +305,9 @@ footer .foot-links a:hover{ color: var(--gold); }
 footer .foot-meta{ font-family: var(--mono); font-size:0.68rem; color: var(--cream-mute); letter-spacing:0.04em; margin-top: 18px; }
 
 /* ---------- page hero (interior pages) ---------- */
+.page-hero{ padding: 64px 0 56px; border-bottom:1px solid var(--line-soft); }
+.page-hero .lede{ max-width: 60ch; }
+/*
 .page-hero{ padding: 64px 0 56px; border-bottom:1px solid var(--line-soft); position:relative; overflow:hidden; }
 .page-hero::before{
   content:""; position:absolute; inset:0;
@@ -312,6 +315,7 @@ footer .foot-meta{ font-family: var(--mono); font-size:0.68rem; color: var(--cre
 }
 .page-hero .wrap{ position:relative; }
 .page-hero .lede{ max-width: 60ch; }
+*/
 
 /* ---------- interactive map ---------- */
 #bnsa-map{
