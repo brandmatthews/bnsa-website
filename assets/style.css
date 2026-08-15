@@ -81,6 +81,7 @@ p{ margin: 0 0 1em; }
   text-transform: uppercase;
   color: var(--gold-bright);
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   gap: 10px;
   margin-bottom: 14px;
