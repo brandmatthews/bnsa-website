@@ -417,7 +417,8 @@ footer .foot-meta{ font-family: var(--mono); font-size:0.68rem; color: var(--cre
 
 /* ---------- chart card (for Python/matplotlib SVG output) ---------- */
 .chart-card{
-  background: var(--cream);
+  /* background: var(--cream); */
+  background: var(--bg); 
   border-radius: var(--radius);
   padding: 24px;
   border: 1px solid var(--line);
